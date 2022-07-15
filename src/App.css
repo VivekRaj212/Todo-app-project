@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+* {
+
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.center-div {
+ text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  padding-top: 43px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.todo-input 
+{
+
+position: relative;
+right: -7px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+  
+
+
+.btn-grad {
+   margin: 10px;
+   padding: 4px 14px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   background-image: linear-gradient(to right, #88d310 0%, #1a9d0a  51%, #54d310  100%)
+  
+   
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ input[type="text"] {
+
+  width: 200px;
+  height: 27px;
+  border-radius: 7px;
+  
+
+  
+ }
+ li {
+
+  list-style: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  text-align: center;
+
+ 
+
+ }
+
+ .check-btn  {
+
+  padding-left: 40px;
+   
+   
+ }
+
+table {
+  margin-left: auto; 
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+#task-1
+{
+  padding-right: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#task-2 {
+
+  padding-right: 300px;
 }
+
+
+
+
+  
+
+

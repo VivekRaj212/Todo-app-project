@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Button from './components/Button/Button';
+import InputText from './components/InputText/InputText';
+import TodoList from './components/TodoList/TodoList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App =() => {
+
+  const [inputText, setInputText] =useState("");
+
+  const [itemList, setItemList]= useState([]);
+
+  const deleteHandler=(param)=> {
+
+    itemList.splice(param,1);
+    setItemList([...itemList]);
+
+
+};
+
+
+    return (
+    <div className="main-div">
+      <div className='center-div'>
+      
+      
+      <h2>VIVEK'S TODO APP</h2><br/>
+
+      <InputText inputText={inputText} setInputText={setInputText}/>
+      <Button inputText={inputText}  itemList={itemList} setItemList={setItemList} setInputText={setInputText}/>
+     
+      <TodoList itemList={itemList} setItemList={setItemList} deleteHandler={deleteHandler}/>
+
+      
+      
+      </div>
     </div>
   );
 }
